@@ -119,7 +119,7 @@
     </div>
   </section>
 
- <!-- Comparison Table Section -->
+<!-- Comparison Table Section -->
 <section id="comparison" class="section reveal">
   <style>
     @media (max-width: 768px) {
@@ -127,16 +127,6 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         position: relative;
-      }
-      .table-wrapper::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 40px;
-        pointer-events: none;
-        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.95));
       }
       .comparison-table {
         width: 1000px;
@@ -147,9 +137,24 @@
       .comparison-table td {
         white-space: nowrap;
       }
+      .scroll-hint {
+        display: block;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        color: #f6ba02;
+        font-style: italic;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .scroll-hint {
+        display: none;
+      }
     }
   </style>
   <h2>⚖️ Perché Callistry è la scelta intelligente (e automatica)</h2>
+  <div class="scroll-hint">← scorri per confrontare tutte le soluzioni →</div>
   <div class="table-wrapper">
     <table class="comparison-table">
       <thead>
