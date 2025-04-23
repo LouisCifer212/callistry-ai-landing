@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Callistry AI - Provalo Ora</title>
   <meta name="description" content="Callistry AI effettua chiamate automatiche, gestisce lead e fissa appuntamenti per te, 24/7.">
-  <meta property="og:title" content="Callistry AI - L’assistente che chiama per te">
+  <meta property="og:title" content="Callistry AI - L’assistente che chiama per te, 24/7">
   <meta property="og:description" content="Ogni chiamata persa è un'opportunità mancata. Scopri Callistry AI.">
   <meta property="og:image" content="https://callistry.app/preview.jpg">
   <meta property="og:url" content="https://callistry.app">
@@ -45,7 +45,7 @@
     <div style="text-align:center; margin:40px 0;">
       <img src="/asset/img/logo.png" alt="Logo Callistry AI" style="display:inline-block; max-width:200px; height:auto;">
     </div>
-    <h1 style="font-size:3rem; color:#f6ba02; text-align:center;">Callistry AI:Il futuro delle chiamate è già qui.</h1>
+    <h1 style="font-size:3rem; color:#f6ba02; text-align:center;">Callistry AI: Il futuro delle chiamate è già qui.</h1>
     <p style="font-size:2rem; color:#f6ba02; text-align:center;">Ogni giorno che resti con il vecchio sistema, perdi lead, tempo e vendite.</p>
     <ul>
       <li>📞 Più di 400 chiamate al giorno restano senza risposta</li>
@@ -173,67 +173,96 @@
     <img src="/asset/img/garanzia-30.png" alt="Garanzia 30 Giorni" style="margin-top:20px; max-width:150px;">
   </section>
   
-<!-- FAQ Section with Accordion using existing CSS -->
+<!-- FAQ Section with Accordion styled as headers -->
 <section id="faq" class="section reveal">
+  <style>
+    .accordion {
+      cursor: pointer;
+      position: relative;
+      padding-right: 30px;
+      transition: color 0.3s ease;
+    }
+    .accordion::after {
+      content: '▼';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.3s ease;
+      font-size: 0.8em;
+      color: #f6ba02;
+    }
+    .accordion.active::after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .panel p {
+      margin: 10px 0 0 0;
+    }
+  </style>
   <h2>❓ Hai dei dubbi? Te li leggiamo in anticipo.</h2>
   <div class="container">
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">La voce è realistica?</button>
+        <h3 class="accordion">La voce è realistica?</h3>
         <div class="panel"><p>Assolutamente sì. Puoi scegliere tra 56 voci — o usare direttamente la tua.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">L'AI supporta più lingue?</button>
+        <h3 class="accordion">L'AI supporta più lingue?</h3>
         <div class="panel"><p>Sì, è fluente in più lingue e si adatta al mercato locale.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Prenotazione Calendario</button>
+        <h3 class="accordion">Prenotazione Calendario</h3>
         <div class="panel"><p>Controlla il calendario in tempo reale e prenota per te — senza bisogno di conferme manuali.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Quanto è veloce l’attivazione?</button>
+        <h3 class="accordion">Quanto è veloce l’attivazione?</h3>
         <div class="panel"><p>Callistry può essere operativo in meno di 24 ore, con setup e training inclusi.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Serve esperienza tecnica?</button>
+        <h3 class="accordion">Serve esperienza tecnica?</h3>
         <div class="panel"><p>Assolutamente no. Ti guidiamo passo passo e ci occupiamo noi della parte tecnica.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Posso usare Callistry anche per il mio team?</button>
+        <h3 class="accordion">Posso usare Callistry anche per il mio team?</h3>
         <div class="panel"><p>Sì, puoi assegnare l’AI a specifici agenti, reparti o flussi — anche contemporaneamente.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Cosa succede se nessuno risponde alla chiamata?</button>
+        <h3 class="accordion">Cosa succede se nessuno risponde alla chiamata?</h3>
         <div class="panel"><p>Callistry può lasciare un messaggio vocale, inviare follow-up automatici o riprovare secondo logiche predefinite.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Come si collega al mio CRM?</button>
+        <h3 class="accordion">Come si collega al mio CRM?</h3>
         <div class="panel"><p>Con integrazioni native o tramite Webhook, si collega a piattaforme come 1stIsland, HubSpot, Zoho, ecc.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">Posso ascoltare le registrazioni?</button>
+        <h3 class="accordion">Posso ascoltare le registrazioni?</h3>
         <div class="panel"><p>Certo. Ogni chiamata è registrata, trascritta e archiviata nel tuo CRM.</p></div>
       </div>
     </div>
     <div class="box"><span></span>
       <div class="content">
-        <button class="accordion">E se voglio parlare con un umano?</button>
+        <h3 class="accordion">E se voglio parlare con un umano?</h3>
         <div class="panel"><p>Callistry può trasferire la chiamata a un agente reale in tempo reale — basta che il cliente lo chieda.</p></div>
       </div>
     </div>
@@ -245,22 +274,21 @@
 
 <!-- Accordion Script -->
 <script>
-  document.querySelectorAll('.accordion').forEach(button => {
-    button.addEventListener('click', () => {
-      const panel = button.nextElementSibling;
-      const isActive = button.classList.contains('active');
+  document.querySelectorAll('.accordion').forEach(header => {
+    header.addEventListener('click', () => {
+      const panel = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
 
-      document.querySelectorAll('.accordion').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.accordion').forEach(h => h.classList.remove('active'));
       document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
 
       if (!isActive) {
-        button.classList.add('active');
+        header.classList.add('active');
         panel.style.maxHeight = panel.scrollHeight + 'px';
       }
     });
   });
 </script>
-
 
   <!-- CTA -->
   <section id="cta" class="section reveal">
@@ -323,4 +351,4 @@
   </script>
 </body>
 </html>
-369
+      369
