@@ -303,6 +303,24 @@
   </div>
 </section>
 
+<!-- Accordion Script -->
+<script>
+  document.querySelectorAll('.accordion').forEach(header => {
+    header.addEventListener('click', () => {
+      const panel = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+
+      document.querySelectorAll('.accordion').forEach(h => h.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
+
+      if (!isActive) {
+        header.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
 <!-- CTA Section -->
 <section id="cta" class="section reveal">
   <h2>⏳ Ready to See It in Action?</h2>
