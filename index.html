@@ -173,33 +173,94 @@
     <img src="/asset/img/garanzia-30.png" alt="Garanzia 30 Giorni" style="margin-top:20px; max-width:150px;">
   </section>
   
-  <!-- FAQ Section -->
-  <section id="faq" class="section reveal">
-    <h2>❓ Domande Frequenti (FAQ)</h2>
-    <div class="container">
-      <div class="box"><span></span>
-        <div class="content">
-          <h2>La voce è realistica?</h2>
-          <p>Sì. Con oltre 56 opzioni e clonazione su richiesta.</p>
-          <a href="#try-me">Scopri</a>
-        </div>
-      </div>
-      <div class="box"><span></span>
-        <div class="content">
-          <h2>L'AI supporta più lingue?</h2>
-          <p>Supporto multilingua completo via cloud.</p>
-          <a href="#try-me">Scopri</a>
-        </div>
-      </div>
-      <div class="box"><span></span>
-        <div class="content">
-          <h2>Prenotazione Calendario</h2>
-          <p>L'AI verifica e prenota automaticamente.</p>
-          <a href="#try-me">Scopri</a>
-        </div>
+<!-- FAQ Section with Accordion using existing CSS -->
+<section id="faq" class="section reveal">
+  <h2>❓ Hai dei dubbi? Te li leggiamo in anticipo.</h2>
+  <div class="container">
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">La voce è realistica?</button>
+        <div class="panel"><p>Assolutamente sì. Puoi scegliere tra 56 voci — o usare direttamente la tua.</p></div>
       </div>
     </div>
-  </section>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">L'AI supporta più lingue?</button>
+        <div class="panel"><p>Sì, è fluente in più lingue e si adatta al mercato locale.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Prenotazione Calendario</button>
+        <div class="panel"><p>Controlla il calendario in tempo reale e prenota per te — senza bisogno di conferme manuali.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Quanto è veloce l’attivazione?</button>
+        <div class="panel"><p>Callistry può essere operativo in meno di 24 ore, con setup e training inclusi.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Serve esperienza tecnica?</button>
+        <div class="panel"><p>Assolutamente no. Ti guidiamo passo passo e ci occupiamo noi della parte tecnica.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Posso usare Callistry anche per il mio team?</button>
+        <div class="panel"><p>Sì, puoi assegnare l’AI a specifici agenti, reparti o flussi — anche contemporaneamente.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Cosa succede se nessuno risponde alla chiamata?</button>
+        <div class="panel"><p>Callistry può lasciare un messaggio vocale, inviare follow-up automatici o riprovare secondo logiche predefinite.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Come si collega al mio CRM?</button>
+        <div class="panel"><p>Con integrazioni native o tramite Webhook, si collega a piattaforme come 1stIsland, HubSpot, Zoho, ecc.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">Posso ascoltare le registrazioni?</button>
+        <div class="panel"><p>Certo. Ogni chiamata è registrata, trascritta e archiviata nel tuo CRM.</p></div>
+      </div>
+    </div>
+    <div class="box"><span></span>
+      <div class="content">
+        <button class="accordion">E se voglio parlare con un umano?</button>
+        <div class="panel"><p>Callistry può trasferire la chiamata a un agente reale in tempo reale — basta che il cliente lo chieda.</p></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:30px;">
+    <p>Non trovi la tua domanda? <a href="#booking" class="btn">Prenota una demo →</a></p>
+  </div>
+</section>
+
+<!-- Accordion Script -->
+<script>
+  document.querySelectorAll('.accordion').forEach(button => {
+    button.addEventListener('click', () => {
+      const panel = button.nextElementSibling;
+      const isActive = button.classList.contains('active');
+
+      document.querySelectorAll('.accordion').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
+
+      if (!isActive) {
+        button.classList.add('active');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
 
   <!-- CTA -->
   <section id="cta" class="section reveal">
