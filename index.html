@@ -2,6 +2,44 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+ <!-- 📊 Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LQ19Y75Z1N');
+</script>
+
+<!-- 📈 Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1192477359076716');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1192477359076716&ev=PageView&noscript=1"
+/></noscript>
+
+<!-- 🔥 Hotjar -->
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:6383595,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Callistry AI – L’Assistente che Chiama per Te, 24/7</title>
 <meta name="description" content="Callistry AI effettua chiamate automatiche, qualifica i lead e fissa appuntamenti per la tua agenzia. Lavora 24/7, senza pause.">
@@ -414,6 +452,46 @@
       observer.observe(section);
     });
   </script>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // "Try Now" click → StartTrial
+  document.querySelectorAll('a[href="#try-me"]').forEach(el => {
+    el.addEventListener('click', () => {
+      gtag('event', 'start_trial', { event_category: 'CTA', event_label: 'Try Now' });
+      fbq('track', 'StartTrial');
+    });
+  });
+
+  // "Book Demo" click → Lead
+  document.querySelectorAll('a[href="#booking"]').forEach(el => {
+    el.addEventListener('click', () => {
+      gtag('event', 'demo_booking', { event_category: 'CTA', event_label: 'Book Demo' });
+      fbq('track', 'Lead');
+    });
+  });
+
+  // Scroll into Features → ViewFeatures
+  const features = document.querySelector('#features');
+  if (features) {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        gtag('event', 'view_features', { event_category: 'Scroll', event_label: 'Features Section' });
+        fbq('trackCustom', 'ViewFeatures');
+        observer.disconnect();
+      }
+    }, { threshold: 0.5 });
+    observer.observe(features);
+  }
+
+  // FAQ interaction
+  document.querySelectorAll('.accordion').forEach(el => {
+    el.addEventListener('click', () => {
+      gtag('event', 'faq_opened', { event_category: 'Interaction', event_label: el.textContent.trim() });
+      fbq('trackCustom', 'FAQOpened');
+    });
+  });
+});
+</script>
 </body>
 </html>
       369
