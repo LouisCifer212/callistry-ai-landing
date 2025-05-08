@@ -152,20 +152,30 @@
     <p>Non legge un copione. Sostiene conversazioni reali, con tono naturale, pause sensate e reazioni coerenti.</p>
   </section>
   
-<!-- Video Section con Bunny Player pulito e centrato -->
-<section id="video" class="section reveal" style="padding: 40px 20px; text-align: center;">
-  <h2 style="margin-bottom: 20px; font-size: 28px;">🎬 Guarda come funziona</h2>
+<!-- Video Section with Wistia Web Component -->
+<section id="video" class="section reveal" style="text-align: center; padding: 40px 20px;">
+  <h2 style="margin-bottom: 20px;">🎬 Guarda come funziona</h2>
 
-  <div style="max-width: 1000px; margin: 0 auto;">
-    <div style="position: relative; width: 100%; padding-top: 56.25%;">
-      <iframe
-        src="https://iframe.mediadelivery.net/play/422547/360edd05-16e2-49c4-b257-aed1365bc3dc"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px;"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-    </div>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <wistia-player 
+      media-id="3wwwuvhtvm" 
+      aspect="1.7777777777777777" 
+      style="width: 100%; border-radius: 12px; overflow: hidden;">
+    </wistia-player>
   </div>
+
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/3wwwuvhtvm.js" async type="module"></script>
+
+  <style>
+    wistia-player[media-id='3wwwuvhtvm']:not(:defined) {
+      background: center / cover no-repeat url('https://fast.wistia.com/embed/medias/3wwwuvhtvm/swatch');
+      display: block;
+      filter: blur(6px);
+      padding-top: 56.25%;
+      border-radius: 12px;
+    }
+  </style>
 </section>
 
  <!-- Features -->
