@@ -87,33 +87,41 @@
 }
 </script>
  <script>
-function enableTracking() {
-  // ✅ Facebook Pixel (Meta)
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1192477359076716'); 
-  fbq('track', 'PageView');
-  console.log("✅ Meta Pixel attivato");
+window.addEventListener("load", function () {
+  // Determina se sei su /it/ o /uae/
+  const isItalian = window.location.pathname.startsWith("/it");
 
-  // ✅ Google Analytics 4
-  const gaScript = document.createElement('script');
-  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N';
-  gaScript.async = true;
-  document.head.appendChild(gaScript);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-LQ19Y75Z1N');
-  console.log("✅ Google Analytics attivato");
-}
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#000" },
+      button: { background: "#f6ba02" }
+    },
+    theme: "classic",
+    position: "bottom-right",
+    type: "opt-in",
+    content: {
+      message: isItalian 
+        ? "Questo sito utilizza cookie per migliorare l'esperienza utente e per il tracciamento pubblicitario. Puoi acconsentire se sei d'accordo."
+        : "This site uses cookies to improve user experience and enable marketing tracking. You can opt-in if you agree.",
+      dismiss: isItalian ? "Rifiuta" : "Decline",
+      allow: isItalian ? "Accetta" : "Accept",
+      link: isItalian ? "Scopri di più" : "Learn more",
+      href: isItalian ? "/it/privacy.html" : "/uae/privacy.html"
+    },
+    onInitialise: function (status) {
+      if (this.hasConsented()) {
+        enableTracking();
+      }
+    },
+    onStatusChange: function (status, chosenBefore) {
+      if (this.hasConsented()) {
+        enableTracking();
+      }
+    }
+  });
+});
 </script>
+
   <!-- Cookie Consent CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
