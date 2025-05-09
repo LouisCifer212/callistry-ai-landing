@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    const userLang = navigator.language || navigator.userLanguage;
-    const langCode = userLang.toLowerCase();
+    // Controlla se c'è un override nella query string
+    const params = new URLSearchParams(window.location.search);
+    const langOverride = params.get("lang");
 
-    if (langCode.startsWith("it")) {
+    if (langOverride === "it") {
       window.location.replace("/it");
-    } else {
+    } else if (langOverride === "uae") {
       window.location.replace("/uae");
+    } else {
+      // Altrimenti usa la lingua del browser
+      const userLang = navigator.language || navigator.userLanguage;
+      const langCode = userLang.toLowerCase();
+
+      if (langCode.startsWith("it")) {
+        window.location.replace("/it");
+      } else {
+        window.location.replace("/uae");
+      }
     }
   </script>
 </head>
