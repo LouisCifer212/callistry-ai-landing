@@ -2,134 +2,95 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
- <!-- 📊 Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LQ19Y75Z1N');
-</script>
-
-<!-- 📈 Meta Pixel -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1192477359076716');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1192477359076716&ev=PageView&noscript=1"
-/></noscript>
-
-<!-- 🔥 Hotjar -->
-<script>
-  (function(h,o,t,j,a,r){
-    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-    h._hjSettings={hjid:6383595,hjsv:6};
-    a=o.getElementsByTagName('head')[0];
-    r=o.createElement('script');r.async=1;
-    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-    a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Callistry AI – L’Assistente che Chiama per Te, 24/7</title>
-<meta name="description" content="Callistry AI effettua chiamate automatiche, qualifica i lead e fissa appuntamenti per la tua agenzia. Lavora 24/7, senza pause.">
-<meta name="keywords" content="assistente vocale AI, chiamate automatiche, generazione lead, agente immobiliare, automazione vendite, booking AI, prenotazioni AI">
-<meta name="author" content="Callistry AI">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="Callistry AI – L’Assistente che Chiama per Te, 24/7">
-<meta property="og:description" content="Ogni chiamata persa è un’opportunità mancata. Prova Callistry AI e scopri il potere delle chiamate vocali automatizzate.">
-<meta property="og:image" content="https://callistry.app/preview.jpg">
-<meta property="og:url" content="https://callistry.app">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Callistry AI – Assistente Vocale 24/7 per la Tua Agenzia">
-<meta name="twitter:description" content="Automatizza le chiamate, qualifica i contatti e fissa appuntamenti in modo intelligente. Scopri Callistry AI.">
-<meta name="twitter:image" content="https://callistry.app/preview.jpg">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/asset/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/asset/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/asset/img/apple-touch-icon.png">
-  <link rel="manifest" href="/asset/manifest.json">
-
+  <title>Callistry AI – GDPR Compliance Test</title>
   <link rel="stylesheet" href="/asset/css/style.css">
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Callistry AI",
-  "operatingSystem": "Web",
-  "applicationCategory": "BusinessApplication",
-  "url": "https://www.callistry.app",
-  "image": "https://www.callistry.app/preview.jpg",
-  "description": "Callistry AI is an automated voice agent that calls, qualifies leads, and books appointments for your agency, 24/7.",
-  "offers": {
-    "@type": "Offer",
-    "price": "497.00",
-    "priceCurrency": "EUR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "42"
-  }
-}
-</script>
-<script>
-window.addEventListener("load", function () {
-  // Determina se sei su /it/ o /uae/
-  const isItalian = window.location.pathname.startsWith("/it");
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { background: "#000" },
-      button: { background: "#f6ba02" }
-    },
-    theme: "classic",
-    position: "bottom-right",
-    type: "opt-in",
-    content: {
-      message: isItalian 
-        ? "Questo sito utilizza cookie per migliorare l'esperienza utente e per il tracciamento pubblicitario. Puoi acconsentire se sei d'accordo."
-        : "This site uses cookies to improve user experience and enable marketing tracking. You can opt-in if you agree.",
-      dismiss: isItalian ? "Rifiuta" : "Decline",
-      allow: isItalian ? "Accetta" : "Accept",
-      link: isItalian ? "Scopri di più" : "Learn more",
-      href: isItalian ? "/it/privacy.html" : "/uae/privacy.html"
-    },
-    onInitialise: function (status) {
-      if (this.hasConsented()) {
-        enableTracking();
+  <!-- Cookie Consent JS -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+  <script>
+  window.addEventListener("load", function () {
+    const isItalian = window.location.pathname.startsWith("/it");
+
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#000" },
+        button: { background: "#f6ba02" }
+      },
+      theme: "classic",
+      position: "bottom-right",
+      type: "opt-in",
+      content: {
+        message: isItalian
+          ? "Questo sito utilizza cookie per migliorare l'esperienza utente e per il tracciamento pubblicitario. Puoi acconsentire se sei d'accordo."
+          : "This site uses cookies to improve user experience and enable marketing tracking. You can opt-in if you agree.",
+        dismiss: isItalian ? "Rifiuta" : "Decline",
+        allow: isItalian ? "Accetta" : "Accept",
+        link: isItalian ? "Scopri di più" : "Learn more",
+        href: isItalian ? "/it/privacy.html" : "/uae/privacy.html"
+      },
+      onInitialise: function (status) {
+        if (this.hasConsented()) {
+          enableTracking();
+        }
+      },
+      onStatusChange: function (status, chosenBefore) {
+        if (this.hasConsented()) {
+          enableTracking();
+        }
       }
-    },
-    onStatusChange: function (status, chosenBefore) {
-      if (this.hasConsented()) {
-        enableTracking();
-      }
-    }
+    });
   });
-});
-</script>
 
-<!-- Cookie Consent CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  function enableTracking() {
+    // Google Analytics 4
+    const ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N";
+    ga.async = true;
+    document.head.appendChild(ga);
 
-<!-- Cookie Consent JS -->
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LQ19Y75Z1N');
 
+    // Meta Pixel
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1192477359076716');
+    fbq('track', 'PageView');
+
+    // Hotjar
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6383595,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  }
+  </script>
 </head>
+<body style="font-family: sans-serif; text-align: center; padding: 50px;">
+  <h1>Callistry AI – Cookie Test Page</h1>
+  <p>Qui verrà caricato il banner GDPR cookie dinamico.</p>
+
+  <!-- Bottone Gestione Preferenze Cookie -->
+  <button onclick="window.cookieconsent && window.cookieconsent.show()" style="margin-top: 20px; padding: 10px 20px; background: #f6ba02; border: none; color: black; font-weight: bold; cursor: pointer; border-radius: 5px;">
+    <script>document.write(window.location.pathname.startsWith('/it') ? "Gestisci preferenze cookie" : "Manage cookie preferences")</script>
+  </button>
+</body>
+</html>
+
 <body>
   <!-- Animated waves background -->
   <div class="wave"></div>
