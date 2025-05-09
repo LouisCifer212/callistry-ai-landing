@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    // Controlla se c'è un override nella query string
     const params = new URLSearchParams(window.location.search);
     const langOverride = params.get("lang");
 
-    if (langOverride === "it") {
+    // Salva override (se presente) nel localStorage
+    if (langOverride) {
+      localStorage.setItem("preferredLang", langOverride);
+    }
+
+    // Se c'è un override salvato, usalo
+    const savedLang = localStorage.getItem("preferredLang");
+
+    if (savedLang === "it") {
       window.location.replace("/it");
-    } else if (langOverride === "uae") {
+    } else if (savedLang === "uae") {
       window.location.replace("/uae");
     } else {
-      // Altrimenti usa la lingua del browser
+      // Altrimenti, usa la lingua del browser
       const userLang = navigator.language || navigator.userLanguage;
       const langCode = userLang.toLowerCase();
 
