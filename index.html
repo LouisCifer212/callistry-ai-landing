@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.toLowerCase();
+
+    if (langCode.startsWith("it")) {
+      window.location.replace("/it");
+    } else {
+      window.location.replace("/uae");
+    }
+  </script>
+</head>
+<body>
+  <p style="text-align:center; font-family:sans-serif; margin-top:50px;">
+    Redirecting based on your language...
+  </p>
+</body>
+</html>
