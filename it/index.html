@@ -1,96 +1,83 @@
  <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Callistry AI – GDPR Compliance Test</title>
+  <title>Callistry AI – The Assistant That Calls for You, 24/7</title>
   <link rel="stylesheet" href="/asset/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
-  <!-- Cookie Consent JS -->
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 
   <script>
-  window.addEventListener("load", function () {
-    const isItalian = window.location.pathname.startsWith("/it");
+    window.addEventListener("load", function () {
+      const isItalian = window.location.pathname.startsWith("/it");
 
-    window.cookieconsent.initialise({
-      palette: {
-        popup: { background: "#000" },
-        button: { background: "#f6ba02" }
-      },
-      theme: "classic",
-      position: "bottom-right",
-      type: "opt-in",
-      content: {
-        message: isItalian
-          ? "Questo sito utilizza cookie per migliorare l'esperienza utente e per il tracciamento pubblicitario. Puoi acconsentire se sei d'accordo."
-          : "This site uses cookies to improve user experience and enable marketing tracking. You can opt-in if you agree.",
-        dismiss: isItalian ? "Rifiuta" : "Decline",
-        allow: isItalian ? "Accetta" : "Accept",
-        link: isItalian ? "Scopri di più" : "Learn more",
-        href: isItalian ? "/it/privacy.html" : "/uae/privacy.html"
-      },
-      onInitialise: function (status) {
-        if (this.hasConsented()) {
-          enableTracking();
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#000" },
+          button: { background: "#f6ba02" }
+        },
+        theme: "classic",
+        position: "bottom-right",
+        type: "opt-in",
+        content: {
+          message: isItalian
+            ? "Questo sito utilizza cookie per migliorare l'esperienza utente e per il tracciamento pubblicitario. Puoi acconsentire se sei d'accordo."
+            : "This site uses cookies to improve user experience and enable marketing tracking. You can opt-in if you agree.",
+          dismiss: isItalian ? "Rifiuta" : "Decline",
+          allow: isItalian ? "Accetta" : "Accept",
+          link: isItalian ? "Scopri di più" : "Learn more",
+          href: isItalian ? "/it/privacy.html" : "/uae/privacy.html"
+        },
+        onInitialise: function (status) {
+          if (this.hasConsented()) {
+            enableTracking();
+          }
+        },
+        onStatusChange: function (status, chosenBefore) {
+          if (this.hasConsented()) {
+            enableTracking();
+          }
         }
-      },
-      onStatusChange: function (status, chosenBefore) {
-        if (this.hasConsented()) {
-          enableTracking();
-        }
-      }
+      });
     });
-  });
 
-  function enableTracking() {
-    // Google Analytics 4
-    const ga = document.createElement('script');
-    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N";
-    ga.async = true;
-    document.head.appendChild(ga);
+    function enableTracking() {
+      // Google Analytics 4
+      const ga = document.createElement('script');
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=G-LQ19Y75Z1N";
+      ga.async = true;
+      document.head.appendChild(ga);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-LQ19Y75Z1N');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-LQ19Y75Z1N');
 
-    // Meta Pixel
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1192477359076716');
-    fbq('track', 'PageView');
+      // Meta Pixel
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1192477359076716');
+      fbq('track', 'PageView');
 
-    // Hotjar
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:6383595,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  }
+      // Hotjar
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6383595,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    }
   </script>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding: 50px;">
-  <h1>Callistry AI – Cookie Test Page</h1>
-  <p>Qui verrà caricato il banner GDPR cookie dinamico.</p>
-
-  <!-- Bottone Gestione Preferenze Cookie -->
-  <button onclick="window.cookieconsent && window.cookieconsent.show()" style="margin-top: 20px; padding: 10px 20px; background: #f6ba02; border: none; color: black; font-weight: bold; cursor: pointer; border-radius: 5px;">
-    <script>document.write(window.location.pathname.startsWith('/it') ? "Gestisci preferenze cookie" : "Manage cookie preferences")</script>
-  </button>
-</body>
-</html>
-
 <body>
   <!-- Animated waves background -->
   <div class="wave"></div>
@@ -572,7 +559,13 @@ window.addEventListener("load", function(){
   });
 });
 </script>
-
+ <header style="text-align:center; padding: 50px 20px;">
+    <h1>Welcome to Callistry AI</h1>
+    <p>Qui la magia del tracciamento avviene solo dopo il tuo consenso. ✨</p>
+    <button onclick="window.cookieconsent && window.cookieconsent.show()" style="margin-top: 20px; padding: 10px 20px; background: #f6ba02; border: none; color: black; font-weight: bold; cursor: pointer; border-radius: 5px;">
+      <script>document.write(window.location.pathname.startsWith('/it') ? "Gestisci preferenze cookie" : "Manage cookie preferences")</script>
+    </button>
+  </header>
 </body>
 </html>
       369
