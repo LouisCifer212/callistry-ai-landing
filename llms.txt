@@ -1,0 +1,58 @@
+# llms.txt – AI‑Crawler Instructions for Callistry.app
+# Created: 2025‑06‑10
+# Owner: Creative Island FZ‑LLC
+# Contact: admin@creativeislandmedia.com
+# -----------------------------------------------------
+# This file provides explicit guidance to Large Language Model (LLM)
+# crawlers and other automated agents. It complements robots.txt by
+# balancing SEO visibility with content‑protection and anti‑spam rules.
+# -----------------------------------------------------
+
+# General site metadata
+Site: https://callistry.app
+Languages: en, it
+Sitemap: https://callistry.app/sitemap.xml
+
+# -----------------------------------------------------
+# 1) Crawler Identification & Rate‑Limiting
+# -----------------------------------------------------
+User‑agent: GPTBot            # OpenAI
+User‑agent: ClaudeBot         # Anthropic
+User‑agent: GeminiBot         # Google DeepMind
+User‑agent: PerplexityBot     # Perplexity AI
+User‑agent: BingAI            # Microsoft Copilot
+User‑agent: *AI*              # Generic match for other AI crawlers
+Crawl‑delay: 5                # Seconds between requests to reduce load
+
+# -----------------------------------------------------
+# 2) Allowed sections (indexable & reference‑safe)
+# -----------------------------------------------------
+Allow: /uae/
+Allow: /it/
+Allow: /sitemap.xml
+
+# -----------------------------------------------------
+# 3) Disallowed or sensitive paths
+# -----------------------------------------------------
+Disallow: /admin
+Disallow: /internal
+Disallow: /checkout
+Disallow: /api
+Disallow: /private
+Disallow: /widget/form/       # Embedded forms (spam‑sensitive)
+Disallow: /try-me             # Landing section with live‑call form
+# -----------------------------------------------------
+# 4) Content‑use policy for LLM training / generation
+# -----------------------------------------------------
+# All text, images and media are © 2025 Creative Island FZ‑LLC.
+# Non‑commercial summarisation is permitted.
+# Any use of our content for model training or fine‑tuning requires
+# prior written licence agreement. Contact us at privacy@callistry.app.
+
+# -----------------------------------------------------
+# 5) Anti‑spam & data‑harvesting notice
+# -----------------------------------------------------
+# Automated harvesting of email addresses, phone numbers or personal data
+# is strictly forbidden. Violators will be blocked and may face legal action.
+
+# End of file
